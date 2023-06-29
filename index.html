@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1bcb1fb516.js" crossorigin="anonymous"></script>
+</head>
+<body>  
+    <section class="login-bg">
+        <video autoplay loop muted playsinline class="back-video" poster="videos/poster.png">
+            <source src="Image/mylivewallpapers.com-Cloud-Dragon.mp4" type="video/mp4" autoplay loop>
+        </video>
+        <div class="login-form">
+            <form>
+                <h1>Login Form</h1>
+                
+                <label for="username" class="username">Username</label>
+                <input type="text" placeholder="Email or Phone" onkeyup="emailError()" id="email" required name="email">
+                <small class="error-email"><i class="fa-solid fa-triangle-exclamation"></i>Please Enter a valid email address.</small>
+
+                <label for="password" class="password">Password</label>
+                <input type="password" placeholder="Password" onkeyup="pwError()" id="pw" required name="password">
+                <small class="error-pw"><i class="fa-solid fa-triangle-exclamation"></i>Password must be 7 to 15 characters/One numeric/Capital Letters</small>
+                <small class="incorrect-pw"><i class="fa-solid fa-triangle-exclamation"></i>Incorrect Password.</small>
+
+                <div class="sign-in-btn">
+                    <button class="forget"><a href="#">Forget Password?</a></button>
+                    <button class="member"><a href="#">Not a member? <span>Sign-up now</span></a></button>
+                </div>
+                <div class="login-btn">
+                    <button class="login" onclick="return loading()"><a href="#">Login</a></button>
+                    <div class="load"></div>
+                </div>
+            </form>
+            
+        </div>
+    </section>
+
+<script src="app.js"></script>
+</body>
+</html>
